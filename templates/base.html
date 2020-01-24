@@ -1,28 +1,80 @@
 <!DOCTYPE html>
 
 <html lang="en">
+
 <head>
 
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+	<link rel="stylesheet" href="{{url_for('static', filename='css/style.css')}}" type="text/css" />
 
 
-    <link rel="stylesheet" href="static/css/style.css">
+        
 
-
-    <title>Cook_Book</title>
+	<title>Cook_Book</title>
 
 </head>
 
 
-<body>
-    
-    <h1>Cook_Book</h1>
+<body style="background-image: url(static/images/cookbook.jpg);">
+	<header>
 
-    {% block content %}
-    {% endblock %}
-    
-   
+
+		<!--------------------------------nav bar ------------------------------------------------------------------------------------------->
+
+		<nav class="navbar navbar-expand-lg navbar-light" style="background-color: black; font-color: white;">
+			<div class="collapse navbar-collapse" id="navbarSupportedContent">
+				<ul class="navbar-nav mr-auto">
+					<li class="nav-item active">
+						<a class="nav-link" style="color: white; width: 100px; height: 79px;" href="{{url_for('index')}}">  Home </a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" style="color: white; width: 100px; height: 79px;" href="#">aaaa</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" style="color: white; width: 100px; height: 79px;" href="#">aaaaa</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" style="color: white; width: 100px; height: 79px;" href="#">aaaaa</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" style="color: white; width: 100px; height: 79px;" href="#">aaaaa</a>
+					</li>
+				</ul>
+			</div>
+		</nav>
+
+
+
+
+	</header>
+
+
+	<content>
+
+		{% block content %}
+
+
+
+
+		{% endblock %}
+
+
+	</content>
+
+
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+
+	<!---------------------JQUERY SCRIPT AND READY FUNCTION TO WORK WITH MATERIALIZE--------------------------------------------->
+
+
 </body>
+
 </html>

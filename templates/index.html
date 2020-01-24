@@ -2,14 +2,34 @@
 
     {% block content %}
 
+    <div>Cook Book</div>
+
+
+<div class="row">
+    <a href="{{ url_for('add_recipe') }}" class="waves-effect waves-light btn green">
+        <i class="material-icons right">clear_all</i>Add Recipe
+    </a>
+</div>
+
       {% for recipe in recipe_name %}
-        {{recipe.recipe_name}}
-        {{recipe.photo}}
-        {{recipe.preparation_time}}
-        {{recipe.cooking_time}}
-        {{recipe.serves}}
+       <div class="container" style="color:white; text-align: center;">
+          <ul>             
+            <li>{{recipe.recipe_name}}</li>                      
+            <li><{{recipe.recipe_photo}}</li>       
+            <li>{{recipe.recipe_serve}}</li>                        
+            <li>{{recipe.recipe_category }}</li>                        
+            <li>{{recipe.recipe_time}}</li>
 
        {% endfor %}
+          </ul>
+       </div>
+       
 
-    
+
+        <a href="#" class="btn-floating btn-medium waves-effect waves-light blue"><i class="material-icons">edit</i></a>
+        <a href="#" class="btn-floating btn-small waves-effect waves-light red"><i class="material-icons">delete_sweep</i></a>
+
+
+
+
     {% endblock %}

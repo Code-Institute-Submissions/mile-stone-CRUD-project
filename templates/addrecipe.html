@@ -1,0 +1,62 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+
+<div class="row">
+	<form action="{{ url_for('insert_recipe') }}" enctype="multipart/form-data" method="POST" class="col s12">
+
+		<!-----------------ADD REF_NUMBER-------------->
+		<div class="row">
+			<div class="input-field col s12">
+
+				<input placeholder="recipe_name" id="recipe_name" name="recipe_name" type="text" class="validate">
+				<label for="recipe_name">recipe_name</label>
+			</div>
+		</div>
+
+		<!-----------------------ADD STOCK QUANTITY INWARD --------------->
+		<div class="row">
+			<div class="input-field col s12">
+
+				<input placeholder="recipe_serve " id="recipe_serve" name="recipe_serve" type="text" class="validate">
+				<label for="recipe_serve">recipe_serve</label>
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="input-field col s12">
+
+				<input placeholder="recipe_category" id="recipe_category" name="recipe_category" type="text" class="validate">
+				<label for="recipe_category">recipe_category</label>
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="input-field col s12">
+
+				<input placeholder="recipe_time" id="recipe_time" name="recipe_time" type="text" class="validate">
+				<label for="recipe_time">recipe_time</label>
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="input-field col s12">
+                <input type="url" name="recipe_photo" id="recipe_photo" placeholder="https://example.com" pattern="https://.*" required>
+                <label for="url">Enter an https:// URL:</label>
+			</div>
+		</div>
+
+
+
+			<!-----------------Button to add to stockt------------------------------->
+			<button class="btn waves-effect green" type="submit" name="action">Add Recipe
+            <i class="material-icons right">spellcheck</i>
+        </button>
+
+
+	</form>
+</div>
+
+
+{% endblock %}
