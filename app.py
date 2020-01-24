@@ -17,16 +17,16 @@ mongo = PyMongo(app)
 @app.route('/')
 @app.route('/index')
 def index():
-    return render_template("index.html", recipe_name=mongo.db.recipe_name.find(),
-                                         recipe_photo=mongo.db.recipe_photo.find())
+    return render_template("index.html", recipe_name=mongo.db.recipe_name.find())
+                                         
 
 @app.route('/add_recipe')
 def add_recipe():
     return render_template('addrecipe.html', recipe_name=mongo.db.recipe_name.find())
-                                            # recipe_photo=mongo.db.recipe_photo.find())
+                                      
 
 
-# this route will insert all the SUPPLIERS input field into DB and return them in the CUSTOMER MANAGEMENT PAGE.
+# this route will insert all the RECIPES input field into DB and return them in the INDEX.
 @app.route('/insert_recipe', methods=["POST"])
 def insert_recipe():
     recipe_name = mongo.db.recipe_name
