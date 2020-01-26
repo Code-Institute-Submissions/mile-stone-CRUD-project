@@ -1,0 +1,51 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+
+
+
+
+	<div class="card" style="margin-left: 350px; margin-right: 350px; margin-bottom: 50px; background-color:#0000007a;">
+
+		<img class="card-img" src="{{recipe.recipe_photo}}" alt="Card image cap" style="height:350px; width:650px; margin:auto;">
+
+
+		<div class="card-body font-weight-bold" style="color:white; text-align:center;">
+
+			<h5 class="card-title font-weight-bolder">Recipe Name: {{recipe.recipe_name}}</h5>
+
+			<p class="card-text">
+				Recipe Category: {{recipe.recipe_category}}
+			</p>
+
+			<p class="card-text">
+				Receipe Serves: {{recipe.recipe_serve}} People
+			</p>
+
+			<p class="card-text">
+				Time: {{recipe.recipe_time}} MIN.
+			</p>
+
+			<p class="card-text">
+				{{recipe.ingredients}}
+			</p>
+
+			<p class="card-text">
+				{{recipe.directions}}
+			</p>
+
+
+		</div>
+
+	</div>
+
+
+
+<a href="#" class="btn-floating btn-medium waves-effect waves-light blue"><i class="material-icons">edit</i></a>
+<a href="#" class="btn-floating btn-small waves-effect waves-light red"><i class="material-icons">delete_sweep</i></a>
+
+
+
+
+{% endblock %}

@@ -1,35 +1,76 @@
 {% extends 'base.html' %}
 
-    {% block content %}
+{% block content %}
 
-    <div>Cook Book</div>
+<div>Cook Book</div>
 
 
 <div class="row">
-    <a href="{{ url_for('add_recipe') }}" class="waves-effect waves-light btn green">
-        <i class="material-icons right">clear_all</i>Add Recipe
-    </a>
+	<a href="{{ url_for('add_recipe') }}" class="waves-effect waves-light btn green">
+		<i class="material-icons right">clear_all</i>Add Recipe
+	</a>
 </div>
 
-      {% for recipe in recipe_name %}
-       <div class="container" style="color:white; text-align: center;">
-          <ul>             
-            <li>{{recipe.recipe_name}}</li>                      
-            <li><img src="{{recipe.recipe_photo}}" class="img-fluid" alt="Responsive image" style="width:150px; height:150px"></li>       
-            <li>{{recipe.recipe_serve}}</li>                        
-            <li>{{recipe.recipe_category }}</li>                        
-            <li>{{recipe.recipe_time}}</li>
+{% for recipe in recipe_name %}
 
-       {% endfor %}
-          </ul>
-       </div>
-       
+<div class="card" style="margin-left: 350px; margin-right: 350px; margin-bottom: 50px; background-color:#0000007a;">
+
+	<img class="card-img" src="{{recipe.recipe_photo}}" alt="Card image cap" style="height:350px; width:650px; margin:auto;">
 
 
-        <a href="#" class="btn-floating btn-medium waves-effect waves-light blue"><i class="material-icons">edit</i></a>
-        <a href="#" class="btn-floating btn-small waves-effect waves-light red"><i class="material-icons">delete_sweep</i></a>
+	<div class="card-body font-weight-bold"  style="color:white; text-align:center;">
+		
+        <h5 class="card-title font-weight-bolder">Recipe Name: {{recipe.recipe_name}}</h5>
+		<p class="card-text">
+			Recipe Category: {{recipe.recipe_category}}
+		</p>
+		<p class="card-text">
+			Receipe Serves: {{recipe.recipe_serve}} People
+		</p>
+		<p class="card-text">
+			Time: {{recipe.recipe_time}} MIN.
+		</p>
+		<a  href="{{ url_for('details', recipe_id=recipe._id) }}" class="btn btn-primary" style="background-color: #0000007a; border:white solid 1px;">Recipe Details</a>
+	
+    </div>
+
+</div>
 
 
+{% endfor %}
 
 
-    {% endblock %}
+{% endblock %}
+
+
+<!---------------------------------------------------------------------------
+
+<div class="container-fluid sm12" style="color:white; text-align: center;">
+   
+    <div class="col sm4">
+	    <img src="{{recipe.recipe_photo}}" class="img-fluid" alt="Responsive image" style="width:150px; height:150px">
+    </div>
+
+		<ul>
+        <div class=" col sm2">
+        	<li>{{recipe.recipe_name}}</li>
+        </div>
+
+        <div class="col sm2">    
+			<li>{{recipe.recipe_category }}</li>
+        </div>
+
+        <div class="col sm2">
+            <li>{{recipe.recipe_serve}}</li>
+        </div>
+
+
+        <div class="col sm2">
+        <li>{{recipe.recipe_time}}</li>
+        </div>
+        
+        </ul>
+</div>
+
+
+------------------------------------------------------------------------------>

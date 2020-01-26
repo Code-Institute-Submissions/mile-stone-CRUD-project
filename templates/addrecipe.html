@@ -3,15 +3,20 @@
 {% block content %}
 
 
-<div class="row">
+<div class="row" style="margin-left: 450px; margin-right: 450px;">
 	<form action="{{ url_for('insert_recipe') }}" enctype="multipart/form-data" method="POST" class="col s12">
+
+
+        <div>
+			<h6 style="font-size: 35px;color: white; text-align: center; text-decoration: underline;">RECIPE DETAILS</h6>
+		</div>
 
 		<!-----------------ADD REF_NUMBER-------------->
 		<div class="row">
 			<div class="input-field col s12">
 
-				<input placeholder="recipe_name" id="recipe_name" name="recipe_name" type="text" class="validate">
-				<label for="recipe_name">recipe_name</label>
+				<input placeholder="Insert a Recipe Name:" id="recipe_name" name="recipe_name" type="text" class="validate">
+				<label for="recipe_name"> </label>
 			</div>
 		</div>
 
@@ -19,38 +24,87 @@
 		<div class="row">
 			<div class="input-field col s12">
 
-				<input placeholder="recipe_serve " id="recipe_serve" name="recipe_serve" type="text" class="validate">
-				<label for="recipe_serve">recipe_serve</label>
+				<input placeholder="Recipe Serves:" id="recipe_serve" name="recipe_serve"  maxlength="3" type="text" class="validate">
+				<label for="recipe_serve">  </label>
 			</div>
 		</div>
 
 		<div class="row">
 			<div class="input-field col s12">
 
-				<input placeholder="recipe_category" id="recipe_category" name="recipe_category" type="text" class="validate">
-				<label for="recipe_category">recipe_category</label>
+				<input placeholder="Recipe Category:" id="recipe_category" name="recipe_category" type="text" class="validate">
+				<label for="recipe_category"> </label>
 			</div>
 		</div>
 
 		<div class="row">
 			<div class="input-field col s12">
 
-				<input placeholder="recipe_time" id="recipe_time" name="recipe_time" type="text" class="validate">
-				<label for="recipe_time">recipe_time</label>
+				<input placeholder="Cook Time:" id="recipe_time" name="recipe_time" type="text"  maxlength="3" class="validate">
+				<label for="recipe_time"> </label>
 			</div>
 		</div>
 
 		<div class="row">
 			<div class="input-field col s12">
-                <input type="url" name="recipe_photo" id="recipe_photo" placeholder="https://example.com" required>
-                <label for="url">Enter an https:// URL:</label>
+				<input type="url" name="recipe_photo" id="recipe_photo" placeholder="Enter you PHOTO URL = https:// URL:" required>
+				<label for="url"> </label>
+			</div>
+		</div>
+
+
+		<div>
+			<h6 style="font-size: 35px;color: white; text-align: center; text-decoration: underline;">INGREDIENTS</h6>
+		</div>
+
+		<div class="row">
+			<div class="input-field col s12">
+
+				<ul>
+					<li><input placeholder="Insert Ingredients:" id="ingredients" name="ingredients" type="text" class="validate"></li>
+					<li><input placeholder="Ingredients" id="ingredients" name="ingredients" type="text" class="validate"></li>
+					<li><input placeholder="Ingredients" id="ingredients" name="ingredients" type="text" class="validate"></li>
+					<li><input placeholder="Ingredients" id="ingredients" name="ingredients" type="text" class="validate"></li>
+					<li><input placeholder="Ingredients" id="ingredients" name="ingredients" type="text" class="validate"></li>
+					<li><input placeholder="Ingredients" id="ingredients" name="ingredients" type="text" class="validate"></li>
+					<li><input placeholder="Ingredients" id="ingredients" name="ingredients" type="text" class="validate"></li>
+		
+
+
+				</ul>
+
+				<label for="ingredients"> </label>
+			</div>
+		</div>
+
+
+        <div>
+			<h6 style="font-size: 35px;color: white; text-align: center; text-decoration: underline;">COOK DIRECTIONS</h6>
+		</div>
+
+        <div class="row">
+			<div class="input-field col s12">
+
+				<ol style="padding-left: 0px;">
+					<li><input placeholder="Inser Cook Directions:" id="directions" name="directions" type="text" class="validate"></li>
+                    <li><input placeholder="Cook Directions" id="directions" name="directions" type="text" class="validate"></li>
+                    <li><input placeholder="Cook Directions" id="directions" name="directions" type="text" class="validate"></li>
+                    <li><input placeholder="Cook Directions" id="directions" name="directions" type="text" class="validate"></li>
+                    <li><input placeholder="Cook Directions" id="directions" name="directions" type="text" class="validate"></li>
+                    <li><input placeholder="Cook Directions" id="directions" name="directions" type="text" class="validate"></li>
+                    <li><input placeholder="Cook Directions" id="directions" name="directions" type="text" class="validate"></li>
+                    <li><input placeholder="Cook Directions" id="directions" name="directions" type="text" class="validate"></li>
+                   
+        		</ol>
+
+				<label for="directionss"> </label>
 			</div>
 		</div>
 
 
 
-			<!-----------------Button to add to stockt------------------------------->
-			<button class="btn waves-effect green" type="submit" name="action">Add Recipe
+		<!-----------------ADD BUTTON TO SAVE IN THE DB------------------------------->
+		<button class="btn waves-effect" type="submit" name="action" style="background-color: #0000007a; border:white solid 1px;" >Add
             <i class="material-icons right">spellcheck</i>
         </button>
 
