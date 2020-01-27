@@ -35,7 +35,7 @@ def insert_recipe():
     recipe_name.update(
         {"_id": ObjectId(inserted_id)},
         {"$set": {"ingredients": request.form.get("ingredients").splitlines(),
-                "directions": request.form.get("directions").splitlines()}})
+                  "directions": request.form.get("directions").splitlines()}})
     return redirect(url_for('index'))
 
 

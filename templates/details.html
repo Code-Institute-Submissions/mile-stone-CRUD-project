@@ -3,12 +3,12 @@
 {% block content %}
 
 
-	<div class="card" style="margin-left: 350px; margin-right: 350px; margin-bottom: 50px; background-color:#0000007a;">
+	<div class="card details-body">
 
-		<img class="card-img" src="{{ recipe.recipe_photo }}" alt="Card image cap" style="height:350px; width:650px; margin:auto;">
+		<img class="card-img details-img" src="{{ recipe.recipe_photo }}" alt="Card image cap">
 
 
-		<div class="card-body font-weight-bold" style="color:white; text-align:center;">
+		<div class="card-body font-weight-bold details-card-body">
 
 			<h5 class="card-title font-weight-bolder">Recipe Name: {{ recipe.recipe_name }}</h5>
 
@@ -23,6 +23,8 @@
 			<p class="card-text">
 				Time: {{ recipe.recipe_time }} MIN.
 			</p>
+
+             <p>-------------------------------------------------------------------------------------------------------</p>
              
             <p class="card-text">
                 <ul>
@@ -33,23 +35,25 @@
                     {% endfor %}
                 </ul>
 			</p>
+
+            <p>-------------------------------------------------------------------------------------------------------</p>
            
 			<p class="card-text">
-                <ul>
+                <ol>
                     {% for direction in recipe.directions %}
                     <li>
                         {{ direction }}
                     </li>
                     {% endfor %}
-                </ul>
+                </ol>
 			</p>
 
 
 		</div>
             
         
-<a href="{{ url_for('edit_recipe', recipe_id=recipe._id)}}" class="btn btn-primary" style="background-color: #0000007a; border:white solid 1px;">Edit Recipe</a>
-<a href="{{ url_for('delete', recipe_id=recipe._id)}}" class="btn btn-primary" style="background-color: #0000007a; border:white solid 1px;">Delete Recipe</a>
+<a href="{{ url_for('edit_recipe', recipe_id=recipe._id)}}" class="btn btn-primary details-button">Edit Recipe</a>
+<a href="{{ url_for('delete', recipe_id=recipe._id)}}" class="btn btn-primary details-button">Delete Recipe</a>
 
 
 

@@ -2,3 +2,109 @@ body {
     background-image: url("../images/cookbook.jpg");
 }
 
+.navbg{
+    background-color: #0000007a;
+    }  
+
+ 
+/*------------------------------------------------------------------------------------------------------------------*/
+
+/*----------index -----------------------*/
+
+.card-01{
+    background-color:#0000007a;
+    margin: 20px;float: left;
+    width: 70%;
+}
+
+.card-01-img{
+    height: 150px;
+    width: 250px;
+    margin:auto;
+    margin-top: 25px;
+}
+
+.card-01-body{
+    color:white;
+    text-align:center;
+}
+
+.card-01-button{
+    background-color: #0000007a;
+    border:white solid 1px;
+}
+
+
+/*--------------------------------add recipe ---------------------------------------------*/
+
+.add-body{
+    margin-left: 450px;
+    margin-right: 450px;
+    color:white;
+
+}
+
+.add-title{
+    font-size: 35px;
+    color: white; 
+    text-align: center; 
+    text-decoration: underline;
+
+}
+
+.add-button{
+    background-color: #0000007a;
+    border:white solid 1px;
+}
+
+/*-------------------------edit --------------------------------*/
+
+.edit-body{
+    margin-left: 450px;
+    margin-right: 450px;
+    color:white;
+
+}
+
+
+.edit-title{
+    font-size: 35px;
+    color: white; 
+    text-align: center; 
+    text-decoration: underline;
+
+}
+
+.edit-button{
+    background-color: #0000007a;
+    border:white solid 1px;
+}
+
+
+/*--------------DETAILS ----------------------------------------------*/
+
+.details-body{
+    margin-left: 350px; 
+    margin-right: 350px; 
+    margin-bottom: 50px; 
+    background-color:#0000007a;
+}
+
+.details-img{
+    height:350px; 
+    width:650px; 
+    margin:auto;
+}
+
+.details-card-body{
+    color:white; 
+    text-align:center;
+
+}
+
+.details-button{
+    background-color: #0000007a;
+    border:white solid 1px;
+    margin-left: 300px;
+    margin-right: 300px;
+}

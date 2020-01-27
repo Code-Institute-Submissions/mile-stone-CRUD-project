@@ -3,15 +3,15 @@
 {% block content %}
 
 
-<div class="row" style="margin-left: 450px; margin-right: 450px; color:white;">
+<div class="row add-body">
 	<form action="{{ url_for('insert_recipe') }}" enctype="multipart/form-data" method="POST" class="col s12">
 
 
         <div>
-			<h6 style="font-size: 35px;color: white; text-align: center; text-decoration: underline;">RECIPE DETAILS</h6>
+			<h6 class="add-title">RECIPE DETAILS</h6>
 		</div>
 
-		<!-----------------ADD REF_NUMBER-------------->
+	
 		<div class="row">
 			<div class="input-field col s12">
 
@@ -20,7 +20,7 @@
 			</div>
 		</div>
 
-		<!-----------------------ADD STOCK QUANTITY INWARD --------------->
+	
 		<div class="row">
 			<div class="input-field col s12">
 
@@ -54,7 +54,7 @@
 
 
 		<div>
-			<h6 style="font-size: 35px;color: white; text-align: center; text-decoration: underline;">INGREDIENTS</h6>
+			<h6 class="add-title">INGREDIENTS</h6>
 		</div>
 
 		<div class="row">
@@ -67,7 +67,7 @@
 
 
         <div>
-			<h6 style="font-size: 35px;color: white; text-align: center; text-decoration: underline;">COOK DIRECTIONS</h6>
+			<h6 class="add-title">COOK METHOD</h6>
 		</div>
 
         <div class="row">
@@ -81,7 +81,7 @@
 
 
 		<!-----------------ADD BUTTON TO SAVE IN THE DB------------------------------->
-		<button class="btn waves-effect" type="submit" name="action" style="background-color: #0000007a; border:white solid 1px;" >Add
+		<button class="btn waves-effect add-button" type="submit" name="action">Add
             <i class="material-icons right">spellcheck</i>
         </button>
 

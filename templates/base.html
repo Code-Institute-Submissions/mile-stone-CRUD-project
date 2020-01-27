@@ -8,13 +8,13 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
 
-    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet">
+	<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
 	<link rel="stylesheet" href="{{url_for('static', filename='css/style.css')}}" type="text/css">
 
 
-        
+
 
 	<title>Cook_Book</title>
 
@@ -24,23 +24,25 @@
 <body>
 	<header>
 
-    
-		<!--------------------------------nav bar ------------------------------------------------------------------------------------------->
 
-		<nav class="navbar navbar-expand-lg navbar-light" style="background-color: #0000007a; font-color: white;">
-			<div class="collapse navbar-collapse" id="navbarSupportedContent">
-				<ul class="navbar-nav mr-auto">
-					<li class="nav-item active">
-						<a class="nav-link" style="color: white; width: 100px; height: 79px;" href="{{url_for('index')}}">  Home </a>
-					</li>
-					<li class="nav-item">
-						<a class="nav-link" style="color: white; width: 100px; height: 79px;" href="{{ url_for('add_recipe') }}">Add Recipe</a>
-					</li>
+		<!--------------------------------nav bar ------------------------------------------------------------------------------------------->
+		<nav class="navbg">
+			<div class="nav-wrapper">
+				<a href="#!" class="brand-logo"> CookBook Online</a>
+				<a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+				<ul class="right hide-on-med-and-down">
+					<li><a href="{{url_for('index')}}"> Home </a></li>
+					<li><a href="{{ url_for('add_recipe') }}"> Add Recipe</a></li>
+					<li><a href="#">Javascript</a></li>
+
+				</ul>
+				<ul class="side-nav" id="mobile-demo">
+					<li><a href="{{url_for('index')}}"> Home </a></li>
+					<li><a href="{{ url_for('add_recipe') }}"> Add Recipe</a></li>
+					<li><a href="#">Javascript</a></li>
 				</ul>
 			</div>
 		</nav>
-
-
 
 
 	</header>
@@ -48,7 +50,7 @@
 
 	<content>
 
-  
+
 		{% block content %}
 
 
@@ -62,9 +64,20 @@
 
 
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 
 	<!---------------------JQUERY SCRIPT AND READY FUNCTION TO WORK WITH MATERIALIZE--------------------------------------------->
+
+	<script type="text/javascript">
+		$(document).ready(function(){
+            $('.sidenav').sidenav();
+        
+         });
+
+
+	</script>
+
+
 
 
 </body>
