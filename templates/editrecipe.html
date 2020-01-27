@@ -63,55 +63,31 @@
 
 		<div class="row">
 			<div class="input-field col s12">
-				<input placeholder="Inser Ingredients:" id="ingredients" name="ingredients" type="text" class="validate" value="{{recipe.ingredients}}"><br>
-				<input placeholder="Inser Ingredients:" id="ingredients" name="ingredients" type="text" class="validate" value="{{recipe.ingredients}}"><br>
-				<input placeholder="Inser Ingredients:" id="ingredients" name="ingredients" type="text" class="validate" value="{{recipe.ingredients}}"><br>
-				<input placeholder="Inser Ingredients:" id="ingredients" name="ingredients" type="text" class="validate" value="{{recipe.ingredients}}"><br>
-				<input placeholder="Inser Ingredients:" id="ingredients" name="ingredients" type="text" class="validate" value="{{recipe.ingredients}}"><br>
-				<input placeholder="Inser Ingredients:" id="ingredients" name="ingredients" type="text" class="validate" value="{{recipe.ingredients}}"><br>
-				<input placeholder="Inser Ingredients:" id="ingredients" name="ingredients" type="text" class="validate" value="{{recipe.ingredients}}"><br>
-				<input placeholder="Inser Ingredients:" id="ingredients" name="ingredients" type="text" class="validate" value="{{recipe.ingredients}}"><br>
-				<input placeholder="Inser Ingredients:" id="ingredients" name="ingredients" type="text" class="validate" value="{{recipe.ingredients}}"><br>
-				<input placeholder="Inser Ingredients:" id="ingredients" name="ingredients" type="text" class="validate" value="{{recipe.ingredients}}"><br>
-				<input placeholder="Inser Ingredients:" id="ingredients" name="ingredients" type="text" class="validate" value="{{recipe.ingredients}}"><br>
-				<input placeholder="Inser Ingredients:" id="ingredients" name="ingredients" type="text" class="validate" value="{{recipe.ingredients}}"><br>
-				<input placeholder="Inser Ingredients:" id="ingredients" name="ingredients" type="text" class="validate" value="{{recipe.ingredients}}"><br>
-				<input placeholder="Inser Ingredients:" id="ingredients" name="ingredients" type="text" class="validate" value="{{recipe.ingredients}}"><br>
-				<input placeholder="Inser Ingredients:" id="ingredients" name="ingredients" type="text" class="validate" value="{{recipe.ingredients}}"><br>
+
+				<textarea placeholder="Insert Ingredients: " id="ingredients" name="ingredients" class="materialize-textarea">{{recipe.ingredients}}</textarea>
 
 
 			</div>
+		</div>
+
+		<div>
+			<h6 style="font-size: 35px;color: white; text-align: center; text-decoration: underline;">EDIT COOK
+				DIRECTIONS</h6>
+		</div>
+
+
+		<div class="row">
+			<div class="input-field col s12">
+				<textarea placeholder="Inserta Cook Method: " id="directions" name="directions" class="materialize-textarea">{{recipe.directions}}</textarea>
+				<label for="directionss"> </label>
 			</div>
+		</div>
 
-			<div>
-				<h6 style="font-size: 35px;color: white; text-align: center; text-decoration: underline;">EDIT COOK
-					DIRECTIONS</h6>
-			</div>
-
-
-			<div class="row">
-				<div class="input-field col s12">
-
-					<input placeholder="Inser Cook Directions:" id="directions" name="directions" type="text" class="validate" value="{{recipe.directions}}"><br>
-					<input placeholder="Inser Cook Directions:" id="directions" name="directions" type="text" class="validate" value="{{recipe.directions}}"><br>
-					<input placeholder="Inser Cook Directions:" id="directions" name="directions" type="text" class="validate" value="{{recipe.directions}}"><br>
-					<input placeholder="Inser Cook Directions:" id="directions" name="directions" type="text" class="validate" value="{{recipe.directions}}"><br>
-					<input placeholder="Inser Cook Directions:" id="directions" name="directions" type="text" class="validate" value="{{recipe.directions}}"><br>
-					<input placeholder="Inser Cook Directions:" id="directions" name="directions" type="text" class="validate" value="{{recipe.directions}}"><br>
-					<input placeholder="Inser Cook Directions:" id="directions" name="directions" type="text" class="validate" value="{{recipe.directions}}"><br>
-					<input placeholder="Inser Cook Directions:" id="directions" name="directions" type="text" class="validate" value="{{recipe.directions}}"><br>
-
-
-
-					<label for="directionss"> </label>
-				</div>
-			</div>
-
-			<div class="row">
-				<button  class="btn btn-primary" style="background-color: #0000007a; border:white solid 1px;" type="submit" name="action">Edit Recipe
+		<div class="row">
+			<button  class="btn btn-primary" style="background-color: #0000007a; border:white solid 1px;" type="submit" name="action">Edit Recipe
                 <i class="material-icons right">playlist_add</i>
              </button>
-			</div>
+		</div>
 	</form>
 </div>
 
