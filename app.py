@@ -3,6 +3,7 @@ from flask import Flask, render_template, redirect, request, url_for, request
 from flask_pymongo import PyMongo
 from bson.objectid import ObjectId
 
+
 from os import path
 if path.exists("env.py"):
     import env
@@ -78,7 +79,13 @@ def update_recipe(recipe_id):
     return redirect(url_for('index'))
 
 
+@app.route('/search', methods=['POST'])
+def search():
+    query = request.form.get('query')
 
+    recipe_name = mongo.db.recipe_name.find({'$text':{'$search': query}})
+    return render_template('index.html', recipe_name=recipe_name, type=search)
+    
 
 if __name__ == '__main__':
     app.run(host=os.environ.get('IP'),
@@ -86,3 +93,25 @@ if __name__ == '__main__':
             debug=True)
 
 
+
+
+'''
+
+@app.route('/search', method=["GET"])
+def search():
+    db.recipe_name.find({'$text': {'$search': "pasta, cake, beef, meet, rice, egg"}})
+
+    return redirect(url_for('index'))
+
+ { "recipe_serve": {"$gt": " "} },
+
+
+ db.recipe_name.createIndex()
+    db.reviews.createIndex( { comments: "text" } )
+    db.reviews.createIndex({ subject: "text", comments: "text" }) 
+    db.recipe_name.dropIndex()
+    db.recipe_name.getIndexes()
+    db.stores.find( { $text: { $search: "recipe_name", "recipe_category" } } )
+
+) 
+'''
