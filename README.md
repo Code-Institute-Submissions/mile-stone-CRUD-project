@@ -60,7 +60,9 @@ The delete button also works if pressed remove specific data from the specific c
 
 ## Deployment
 
-....
+. My Deployment was made manual thru Heroku dashboard.
+
+    . To access my Project here is the link: https://cook-book-milestone-project-3.herokuapp.com/
 
 ## Credits
 
