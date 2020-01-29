@@ -2,89 +2,85 @@
 
 {% block content %}
 
-<div>
-	<h6 class="edit-title">EDIT RECIPE DETAILS</h6>
-</div>
 
-<div class="row edit-body">
-	<form action="{{ url_for('update_recipe', recipe_id=recipe._id) }}" method="POST" class="col s12">
+
+<div class="add-body">
+	<form action="{{ url_for('update_recipe', recipe_id=recipe._id) }}" method="POST" class="form-add">
 
 		<div class="row">
-			<div class="input-field col s12">
+
+            <div>
+	            <h6 class="edit-title">EDIT RECIPE DETAILS</h6>
+            </div>
+
+			<div class="input-field">
 			
-				<input placeholder="Edit a Recipe Name:" id="recipe_name" name="recipe_name" type="text" class="validate" value="{{recipe.recipe_name}}">
+				<input placeholder="Edit a Recipe Name:" id="recipe_name" name="recipe_name" type="text" class="validate add-recp" value="{{recipe.recipe_name}}">
 				<label for="recipe_name"> </label>
 			</div>
 		</div>
 
 		<div class="row">
-			<div class="input-field col s12">
+			<div class="input-field">
 
-				<input placeholder="Recipe Serves:" id="recipe_serve" name="recipe_serve"  maxlength="3" type="text" class="validate" value="{{recipe.recipe_serve}}">
+				<input placeholder="Recipe Serves:" id="recipe_serve" name="recipe_serve"  maxlength="3" type="text" class="validate add-recp" value="{{recipe.recipe_serve}}">
 				<label for="recipe_serve">  </label>
 			</div>
 		</div>
 
+	
 		<div class="row">
-			<div class="input-field col s12">
+			<div class="input-field">
 
-				<input placeholder="Edit a Recipe Category:" id="recipe_category" name="recipe_category" type="text" class="validate" value="{{recipe.recipe_category}}">
+				<input placeholder="Edit a Recipe Category:" id="recipe_category" name="recipe_category" type="text" class="validate add-recp" value="{{recipe.recipe_category}}">
 				<label for="recipe_category"> </label>
 			</div>
 		</div>
 
 		<div class="row">
-			<div class="input-field col s12">
+			<div class="input-field">
 
-				<input placeholder="Edit a Recipe Category:" id="recipe_category" name="recipe_category" type="text" class="validate" value="{{recipe.recipe_category}}">
-				<label for="recipe_category"> </label>
-			</div>
-		</div>
-
-		<div class="row">
-			<div class="input-field col s12">
-
-				<input placeholder="Cook Time:" id="recipe_time" name="recipe_time" type="text"  maxlength="3" class="validate" value="{{recipe.recipe_time}}">
+				<input placeholder="Cook Time:" id="recipe_time" name="recipe_time" type="text"  maxlength="3" class="validate add-recp" value="{{recipe.recipe_time}}">
 				<label for="recipe_time"> </label>
 			</div>
 		</div>
 
 		<div class="row">
-			<div class="input-field col s12">
-				<input type="url" name="recipe_photo" id="recipe_photo" placeholder="Enter you PHOTO URL = https:// URL:" required value="{{recipe.recipe_photo}}">
+			<div class="input-field">
+				<input type="url" name="recipe_photo" id="recipe_photo" class="add-recp" placeholder="Enter you PHOTO URL = https:// URL:" required value="{{recipe.recipe_photo}}">
 				<label for="url"> </label>
 			</div>
 		</div>
 
 		<div>
-			<h6 class="edit-title"> EDIT INGREDIENTS </h6>
+			<h6 class="edit-titles"> EDIT INGREDIENTS </h6>
 		</div>
 
 		<div class="row">
-			<div class="input-field col s12">
+			<div class="input-field">
 
-				<textarea placeholder="Insert Ingredients: " id="ingredients" name="ingredients" class="materialize-textarea">{{recipe.ingredients}}</textarea>
+				<textarea placeholder="Insert Ingredients: " id="ingredients" name="ingredients" class="add-recp-text">{{recipe.ingredients}}</textarea>
 
 
 			</div>
 		</div>
 
 		<div>
-			<h6 class="edit-title">EDIT COOK DIRECTIONS</h6>
+			<h6 class="edit-titles">EDIT COOK DIRECTIONS</h6>
 		</div>
 
 
 		<div class="row">
-			<div class="input-field col s12">
-				<textarea placeholder="Inserta Cook Method: " id="directions" name="directions" class="materialize-textarea">{{recipe.directions}}</textarea>
+			<div class="input-field">
+				<textarea placeholder="Inserta Cook Method: " id="directions" name="directions" class="add-recp-text">{{recipe.directions}}</textarea>
 				<label for="directionss"> </label>
 			</div>
 		</div>
 
 		<div class="row">
-			<button  class="btn btn-primary edit-button" type="submit" name="action">Edit Recipe
-                <i class="material-icons right">playlist_add</i>
-             </button>
+			<button  class="btn add-button" type="submit" name="action">Edit Recipe
+                
+            </button>
 		</div>
 	</form>
 </div>

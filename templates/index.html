@@ -2,40 +2,36 @@
 
 {% block content %}
 
-
-
-<form action="{{url_for('search')}}", method="POST">
-    <input type="text" name="query"/>
-    <input type="submit" value="Submit"/>
-</form>
-
-
-
-<div class="container">
+<div class="container-fluid">
 
 	<div class="row">
 
     
 {% for recipe in recipe_name %}
 
-		<div class="card-deck col s12 m6 l3 card-01">
+<!-----THE DIV CLASS CARD-DECK IS GIVING A CSS ERROR SELECTOR SPECIFICITY SO I HAVE TO ADD IN THE CODE----->
+		<div class="card-deck">
 			
-			<img class="card-img card-01-img" src="{{recipe.recipe_photo}}">
+			<img class="img-fluid card-01-img" alt="Responsive image" src="{{recipe.recipe_photo}}">
+
 
 
 			<div class="card-body card-01-body">
 
-				<h5 class="card-title">Recipe Name: {{recipe.recipe_name}}</h5>
-				<p class="card-text">
+				<p class="card-title">Recipe Name: {{recipe.recipe_name}}</p>
+		
+                <p class="card-text">
 					Recipe Category: {{recipe.recipe_category}}
 				</p>
-				<p class="card-text">
+				
+                <p class="card-text">
 					Receipe Serves: {{recipe.recipe_serve}} People
 				</p>
-				<p class="card-text">
+				
+                <p class="card-text">
 					Time: {{recipe.recipe_time}} MIN.
 				</p>
-				<a href="{{ url_for('details', recipe_id=recipe._id) }}" class="btn btn-primary card-01-button">Recipe Details</a>
+				<a href="{{ url_for('details', recipe_id=recipe._id) }}" class="btn card-01-button">Recipe Details</a>
 
 
 			</div>

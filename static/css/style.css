@@ -1,51 +1,125 @@
 body {
-    background-image: url("../images/cookbook.jpg");
+    background-image: url("../images/background-1.jpg");
+}
+
+a.nav-link.active {
+    color: white;
+}
+a.nav-link {
+    color: white;
 }
 
 .navbg{
-    background-color: #0000007a;
+    background-color: #000000d9;
+    font-size: 18px;
+    font-family: monospace;
+    height: 50px;
     }  
 
-.form-control-sm{
-    
+.search-box{
+    text-align: center;
+    border: 1px solid white;   
+    margin-top: 7px;
+    color: white;
+    width: 300px;
 }
- 
+
+.search-input{
+    background-color: #000000d9;
+    color: white;
+    width: 300px;
+}
+
+
 /*------------------------------------------------------------------------------------------------------------------*/
 
 /*----------index -----------------------*/
+.row{
+    margin-left: 150px;
+}
 
-.card-01{
-    background-color:#0000007a;
-    margin: 20px;float: left;
-    width: 70%;
+
+.card-deck{
+    background-color: #000000d9;
+    margin-left: 20px;
+    margin-top: 50px;
+    margin-bottom: 20px;
+    width: 25%;
+    margin-right: 20px;
+    display: inline-flex;
+    
+    
 }
 
 .card-01-img{
-    height: 150px;
-    width: 250px;
-    margin:auto;
-    margin-top: 25px;
+    height: 180px;
+    width: 286px;
+    margin: 20px auto;
+   
+    
 }
 
 .card-01-body{
     color:white;
     text-align:center;
+   
 }
 
 .card-01-button{
-    background-color: #0000007a;
+    background-color:#000000d9;
     border:white solid 1px;
+    color: white;
+   
 }
+
+/*----------------@media----------------*/
+
+@media (min-width: 1020px) and (max-width: 1050px){
+    .row{
+        margin-left: 100px;
+    }
+
+}
+
+
+@media (min-width: 600px ) and (max-width: 900px){
+    .row{
+        margin-left: 40px;
+    }
+
+}
+
+@media (max-width: 500px){
+    .row{
+        margin-left: 5px;
+    }
+
+    .card-deck{
+        margin-left: 3px;
+        margin-top: 50px;
+        margin-bottom: 50px;
+        width: 100%;
+        margin-right: 20px;
+        display: grid;
+
+    }   
+    
+    .search-box {
+        width: 380px;
+        margin-top: 10px;   
+    }
+
+ }
+/*-----------------------------------------*/
 
 
 /*--------------------------------add recipe ---------------------------------------------*/
-
 .add-body{
-    margin-left: 450px;
-    margin-right: 450px;
     color:white;
+    margin: 100px;
 
 }
+
 
 .add-title{
     font-size: 35px;
@@ -55,59 +129,335 @@ body {
 
 }
 
+.form-add{
+    background-color: #000000d9;
+    margin-top: 50px;
+    color: white;
+    margin-left: 100px;
+    margin-right: 100px;
+}
+
 .add-button{
-    background-color: #0000007a;
+    margin-bottom: 25px;
+    background-color:#000000d9;
     border:white solid 1px;
+    margin-left: 20px;
+    margin-top: 10px;
+    color: white;
+    
 }
 
-/*-------------------------edit --------------------------------*/
+.add-recp{
+    width: 720px;
+    margin-left: 75px;
+    margin-bottom: 5px;
+    font-family: monospace;
+    background-color:  #000000d9;
+    font-size: 15px;
+    color: white;
+}
 
-.edit-body{
-    margin-left: 450px;
-    margin-right: 450px;
-    color:white;
+.add-recp-text{
+    width: 720px;
+    height: 120px;
+    margin-left: 75px;
+    margin-bottom: 5px;
+    font-family: monospace;
+    background-color:  #000000d9;
+    font-size: 15px;
+    color: white;
+}
+
+/*------------------------------------------*/
+@media (max-width:321px){
+    
+    .search-box{
+        width: 250px;
+        margin-left: 5px;
+    }
+    
+    .add-body{
+        margin-top: 20px;
+        margin-left: 10px;
+        margin-right: 10px;
+        margin-bottom: 5px;
+    }
+
+    .form-add{
+        margin-left: 5px;  
+        margin-right: 5px; 
+    
+    }
+
+
+    .add-recp{
+    width: 250px;
+    margin-left: 15px;
+    margin-bottom: 5px;
+    font-family: monospace;
+    background-color:  #000000d9;
+    font-size: 12px;
+    color: white;
+    }       
+
+.add-recp-text{
+    width: 250px;
+    height: 80px;
+    margin-left: 15px;
+    margin-bottom: 5px;
+    font-family: monospace;
+    background-color:  #000000d9;
+    font-size: 12px;
+    color: white;
+    }
 
 }
+
+@media (min-width:321px) and (max-width: 400px){
+    .search-box{
+        width: 250px;
+        margin-left: 5px;
+    }
+    
+    .add-body{
+        margin-top: 20px;
+        margin-left: 10px;
+        margin-right: 10px;
+        margin-bottom: 5px;
+    }
+
+    .form-add{
+        margin-left: 5px;  
+        margin-right: 5px; 
+    
+    }
+
+
+    .add-recp{
+    width: 300px;
+    margin-left: 15px;
+    margin-bottom: 5px;
+    font-family: monospace;
+    background-color:  #000000d9;
+    font-size: 12px;
+    color: white;
+    }       
+
+.add-recp-text{
+    width: 300px;
+    height: 80px;
+    margin-left: 15px;
+    margin-bottom: 5px;
+    font-family: monospace;
+    background-color:  #000000d9;
+    font-size: 12px;
+    color: white;
+    }
+
+
+
+}
+
+
+@media (min-width: 405px) and (max-width: 500px){
+    .add-body{
+        margin-top: 20px;
+        margin-left: 15px;
+        margin-right: 15px;
+        margin-bottom: 5px;
+    }
+
+    .form-add{
+        margin-left: 10px;  
+        margin-right: 10px; 
+    
+    }
+
+
+    .add-recp{
+    width: 250px;
+    margin-left: 55px;
+    margin-bottom: 5px;
+    font-family: monospace;
+    background-color:  #000000d9;
+    font-size: 12px;
+    color: white;
+    }       
+
+.add-recp-text{
+    width: 250px;
+    height: 80px;
+    margin-left: 55px;
+    margin-bottom: 5px;
+    font-family: monospace;
+    background-color:  #000000d9;
+    font-size: 12px;
+    color: white;
+    }
+
+}
+
+@media (min-width:767px ) and (max-width:900px){
+    .add-body{
+        margin-top: 20px;
+        margin-left: 12px;
+        margin-right: 12px;
+        margin-bottom: 10px;
+    }
+
+    .form-add{
+        margin-left: 25px;  
+        margin-right: 25px; 
+    
+    }
+
+
+    .add-recp{
+    width: 550px;
+    margin-left: 50px;
+    margin-bottom: 5px;
+    font-family: monospace;
+    background-color:  #000000d9;
+    font-size: 12px;
+    color: white;
+    }       
+
+    .add-recp-text{
+    width: 550px;
+    height: 120px;
+    margin-left: 50px;
+    margin-bottom: 5px;
+    font-family: monospace;
+    background-color:  #000000d9;
+    font-size: 12px;
+    color: white;
+    }
+
+}
+
+@media (min-width:  901px ) and (max-width: 1025px){
+    .add-body{
+        margin-top: 20px;
+        margin-left: 25px;
+        margin-right: 25px;
+        margin-bottom: 10px;
+    }
+
+    .form-add{
+        margin-left: 10px;  
+        margin-right: 10px; 
+    
+    }
+
+
+    .add-recp{
+    width: 600px;
+    margin-left: 70px;
+    margin-bottom: 5px;
+    font-family: monospace;
+    background-color:  #000000d9;
+    font-size: 12px;
+    color: white;
+    }       
+
+    .add-recp-text{
+    width: 600px;
+    height: 180px;
+    margin-left: 65px;
+    margin-bottom: 5px;
+    font-family: monospace;
+    background-color:  #000000d9;
+    font-size: 12px;
+    color: white;
+    }
+
+}
+
+
+
+
+
+/*-----------------------DETAILS ----------------------------------------------*/
+#details-body {
+    margin-right: 10px;
+    margin-left: 250px;
+    margin-bottom: 50px;
+    background-color:#000000d9;
+    width: 600px;
+}
+
+.details-img {
+    height:300px; 
+    width:70%; 
+    margin:auto;
+    margin-top: 30px;
+}
+
+.details-card-body {
+    color:white; 
+    text-align:center;
+    
+}
+
+.details-button {
+    margin-bottom: 25px;
+    background-color:#000000d9;
+    border:white solid 1px;
+    margin-left: 120px;
+    margin-top: 10px;
+    color: white;
+}
+
+
+/*---------------------------------------*/
 
 
 .edit-title{
-    font-size: 35px;
-    color: white; 
-    text-align: center; 
-    text-decoration: underline;
-
-}
-
-.edit-button{
-    background-color: #0000007a;
-    border:white solid 1px;
-}
-
-
-/*--------------DETAILS ----------------------------------------------*/
-
-.details-body{
-    margin-left: 350px; 
-    margin-right: 350px; 
-    margin-bottom: 50px; 
-    background-color:#0000007a;
-}
-
-.details-img{
-    height:350px; 
-    width:650px; 
-    margin:auto;
-}
-
-.details-card-body{
-    color:white; 
-    text-align:center;
-
-}
-
-.details-button{
-    background-color: #0000007a;
-    border:white solid 1px;
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 25px;
     margin-left: 300px;
-    margin-right: 300px;
+   
+}
+
+.edit-titles{
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 25px;
+    
+}
+
+@media (max-width:321px){
+   .edit-title{
+       margin-left: 40px;
+       font-size: 18px;
+   }
+
+}    
+
+@media (min-width:321px) and (max-width: 400px){
+
+    .edit-title{
+       margin-left: 40px;
+       font-size: 25px;
+   }
+
+}
+
+@media (min-width: 405px) and (max-width: 500px){
+
+    .edit-title{
+       margin-left: 55px;
+       font-size: 25px;
+   }
+
+}
+
+@media (min-width:  901px ) and (max-width: 1025px){
+
+    .edit-title{
+       margin-left: 230px;
+       font-size: 25px;
+   }
+
 }

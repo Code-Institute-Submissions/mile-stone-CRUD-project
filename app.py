@@ -26,7 +26,6 @@ def add_recipe():
     return render_template('addrecipe.html', recipe_name=mongo.db.recipe_name.find())
                                       
 
-
 # this route will insert all the RECIPES input field into DB and return them in the INDEX.
 @app.route('/insert_recipe', methods=["POST"])
 def insert_recipe():
@@ -95,23 +94,3 @@ if __name__ == '__main__':
 
 
 
-'''
-
-@app.route('/search', method=["GET"])
-def search():
-    db.recipe_name.find({'$text': {'$search': "pasta, cake, beef, meet, rice, egg"}})
-
-    return redirect(url_for('index'))
-
- { "recipe_serve": {"$gt": " "} },
-
-
- db.recipe_name.createIndex()
-    db.reviews.createIndex( { comments: "text" } )
-    db.reviews.createIndex({ subject: "text", comments: "text" }) 
-    db.recipe_name.dropIndex()
-    db.recipe_name.getIndexes()
-    db.stores.find( { $text: { $search: "recipe_name", "recipe_category" } } )
-
-) 
-'''

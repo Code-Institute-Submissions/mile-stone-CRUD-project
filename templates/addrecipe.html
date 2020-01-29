@@ -3,8 +3,8 @@
 {% block content %}
 
 
-<div class="row add-body">
-	<form action="{{ url_for('insert_recipe') }}" enctype="multipart/form-data" method="POST" class="col s12">
+<div class="add-body">
+	<form action="{{ url_for('insert_recipe') }}" enctype="multipart/form-data" method="POST" class="form-add">
 
 
         <div>
@@ -13,41 +13,41 @@
 
 	
 		<div class="row">
-			<div class="input-field col s12">
+			<div class="input-field">
 
-				<input placeholder="Insert a Recipe Name:" id="recipe_name" name="recipe_name" type="text" class="validate">
+				<input placeholder="Insert a Recipe Name:" id="recipe_name" name="recipe_name" type="text" class="validate add-recp">
 				<label for="recipe_name"> </label>
 			</div>
 		</div>
 
 	
 		<div class="row">
-			<div class="input-field col s12">
+			<div class="input-field ">
 
-				<input placeholder="Recipe Serves:" id="recipe_serve" name="recipe_serve"  maxlength="3" type="text" class="validate">
+				<input placeholder="Recipe Serves:" id="recipe_serve" name="recipe_serve"  maxlength="4" type="text" class="validate add-recp">
 				<label for="recipe_serve">  </label>
 			</div>
 		</div>
 
 		<div class="row">
-			<div class="input-field col s12">
+			<div class="input-field">
 
-				<input placeholder="Recipe Category:" id="recipe_category" name="recipe_category" type="text" class="validate">
+				<input placeholder="Recipe Category:" id="recipe_category" name="recipe_category" type="text" class="validate add-recp">
 				<label for="recipe_category"> </label>
 			</div>
 		</div>
 
 		<div class="row">
-			<div class="input-field col s12">
+			<div class="input-field">
 
-				<input placeholder="Cook Time:" id="recipe_time" name="recipe_time" type="text"  maxlength="3" class="validate">
+				<input placeholder="Cook Time:" id="recipe_time" name="recipe_time" type="text"  maxlength="4" class="validate add-recp">
 				<label for="recipe_time"> </label>
 			</div>
 		</div>
 
 		<div class="row">
-			<div class="input-field col s12">
-				<input type="url" name="recipe_photo" id="recipe_photo" placeholder="Enter you PHOTO URL = https:// URL:" required>
+			<div class="input-field">
+				<input type="url" name="recipe_photo" id="recipe_photo" class="add-recp" placeholder="Enter you PHOTO URL = https:// URL:" required>
 				<label for="url"> </label>
 			</div>
 		</div>
@@ -58,9 +58,9 @@
 		</div>
 
 		<div class="row">
-			<div class="input-field col s12">
+			<div class="input-field">
 		
-				<textarea placeholder="Insert Ingredients: " id="ingredients" name="ingredients" class="materialize-textarea"></textarea>
+				<textarea placeholder="Insert Ingredients: " id="ingredients" name="ingredients" class="add-recp-text"></textarea>
 				
 			</div>
 		</div>
@@ -71,9 +71,9 @@
 		</div>
 
         <div class="row">
-			<div class="input-field col s12">
+			<div class="input-field">
                     			                   
-				<textarea placeholder="Inserta Cook Method: " id="directions" name="directions" class="materialize-textarea"></textarea>
+				<textarea placeholder="Inserta Cook Method: " id="directions" name="directions" class="add-recp-text"></textarea>
               
 			</div>
 		</div>
@@ -81,8 +81,8 @@
 
 
 		<!-----------------ADD BUTTON TO SAVE IN THE DB------------------------------->
-		<button class="btn waves-effect add-button" type="submit" name="action">Add
-            <i class="material-icons right">spellcheck</i>
+		<button class="btn add-button" type="submit" name="action">Add Recipe
+            
         </button>
 
 
